@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback) => {
             else if(res.body.error) callback('Tidak dapat menemukan lokasi', undefined);
             else {
                 const { current } = res.body;
-                console.log(current);
+                // console.log(current);
                 
                 callback(undefined,
                     `Info cuaca ${current.weather_descriptions[0]}. ${current.temperature} derajat. Index UV adalah ${current.uv_index} nm. Visiblitas ${current.visibility} kilometer.`
