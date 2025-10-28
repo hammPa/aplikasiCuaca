@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
         pesanDua.textContent = '';
     
             try {
-                const response = await fetch(`http://localhost:4000/infoCuaca?address=${location}`);
+                const response = await fetch(`/infoCuaca?address=${location}`);
                 const data = await response.json();
 
                 if (data.err) pesanSatu.textContent = data.err;
